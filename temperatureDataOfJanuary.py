@@ -23,14 +23,49 @@ Y2016 = np.array(df.loc["2016/1/1":"2016/1/31","C"])
 Y2017 = np.array(df.loc["2017/1/1":"2017/1/31","C"])
 Y2018 = np.array(df.loc["2018/1/1":"2018/1/31","C"])
 
-plt.plot(Y2009)
-plt.plot(Y2010)
-plt.plot(Y2011)
-plt.plot(Y2012)
-plt.plot(Y2013)
-plt.plot(Y2014)
-plt.plot(Y2015)
-plt.plot(Y2016)
-plt.plot(Y2017)
-plt.plot(Y2018)
+
+
+dataframe = pd.DataFrame({
+    "x":x,
+    "2009":Y2009,
+    "2010":Y2010,
+    "2011":Y2011,
+    "2012":Y2012,
+    "2013":Y2013,
+    "2014":Y2014,
+    "2015":Y2015,
+    "2016":Y2016,
+    "2017":Y2017,
+    "2018":Y2018
+})
+
+
+fig = plt.figure()
+ax = fig.add_subplot(1, 1, 1)
+
+ax.plot('x', '2009', data=dataframe, label='2009',
+        marker='o', linewidth=1, markersize=2.0)
+ax.plot('x', '2010', data=dataframe, label='2010',
+        marker='o', linewidth=1, markersize=2.0)
+ax.plot('x', '2011', data=dataframe, label='2011',
+        marker='o', linewidth=1, markersize=2.0)
+ax.plot('x', '2012', data=dataframe, label='2012',
+        marker='o', linewidth=1, markersize=2.0)
+ax.plot('x', '2013', data=dataframe, label='2013',
+        marker='o', linewidth=1, markersize=2.0)
+ax.plot('x', '2014', data=dataframe, label='2014',
+        marker='o', linewidth=1, markersize=2.0)
+ax.plot('x', '2015', data=dataframe, label='2015',
+        marker='o', linewidth=1, markersize=2.0)
+ax.plot('x', '2016', data=dataframe, label='2016',
+        marker='o', linewidth=1, markersize=2.0)
+ax.plot('x', '2017', data=dataframe, label='2017',
+        marker='o', linewidth=1, markersize=2.0)
+ax.plot('x', '2018', data=dataframe, label='2018',
+        marker='o', linewidth=1, markersize=2.0)
+
+ax.legend()
+ax.set_xlabel("date")  # 軸ラベル
+ax.set_ylabel("temperature")
+ax.set_ylim(-10,10)
 plt.show()
