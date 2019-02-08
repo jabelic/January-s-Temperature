@@ -37,6 +37,21 @@ dataframe = pd.DataFrame({
     "2018":Y2018
 })
 
+Data2 = pd.DataFrame({
+        "2009":Y2009,
+        "2010":Y2010,
+        "2011":Y2011,
+        "2012":Y2012,
+        "2013":Y2013,
+        "2014":Y2014,
+        "2015":Y2015,
+        "2016":Y2016,
+        "2017":Y2017,
+        "2018":Y2018
+})
+
+
+
 
 fig = plt.figure()
 ax = fig.add_subplot(1, 1, 1)
@@ -66,4 +81,6 @@ ax.legend()
 ax.set_xlabel("date")  # 軸ラベル
 ax.set_ylabel("temperature")
 ax.set_ylim(-10,10)
+#plt.show()
+Data2.plot( kind='kde', figsize=(8, 5), fontsize=10 )
 plt.show()
