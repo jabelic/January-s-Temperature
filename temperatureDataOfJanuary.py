@@ -82,5 +82,7 @@ ax.set_xlabel("date")  # 軸ラベル
 ax.set_ylabel("temperature")
 ax.set_ylim(-10,10)
 #plt.show()
-Data2.plot( kind='kde', figsize=(8, 5), fontsize=10 )
+Data2.plot( kind='kde', figsize=(6, 5), fontsize=10 )
+
+
 plt.show()
